@@ -10,14 +10,17 @@ public class Calc{
         number1= 0;
         number2= 0;
     }
-    //these are the set methods
+
+    //set methods
     public void setNum1(double n1){
-        number1= n1;
+        number1 = n1;
     }
 
     public void setNum2(double n2){
-        number2= n2;
+        number2 = n2;
     }
+
+
     //these are the get methods
     public double getNum1(){
         return number1;
@@ -26,6 +29,12 @@ public class Calc{
     public double getNum2(){
         return number2;
     }
+
+    // validation method
+    public boolean validateNumber(double n) {
+        return !Double.isNaN(n) && !Double.isInfinite(n);
+        }
+
     //this method adds the variables
     public double add(){
         return number1 + number2;
@@ -46,3 +55,5 @@ public class Calc{
         return number1 / number2;
     }
 }
+
+
